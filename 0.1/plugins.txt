@@ -1,0 +1,15 @@
+jclouds-jenkins:2.8
+credentials:1.21
+oauth-credentials:0.3
+google-oauth-plugin:0.3
+ssh-credentials:1.10
+ssh-agent:1.5
+git-client:1.15.0
+scm-api:0.2
+matrix-project:1.4
+mailer:1.12
+multiple-scms:0.3
+git:2.3.4
+github-api:1.59
+github:1.10
+ghprb:1.16-8
