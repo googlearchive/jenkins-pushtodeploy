@@ -1,5 +1,5 @@
 FROM jenkins
-COPY /plugins.txt plugins.txt
+ADD plugins.txt /usr/share/jenkins/
+ADD kubernetes.hpi $JENKINS_HOME/plugins/
 USER root
-RUN plugins.sh plugins.txt
-USER jenkins
+RUN plugins.sh /usr/share/jenkins/plugins.txt
