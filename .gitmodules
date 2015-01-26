@@ -1,3 +1,6 @@
 [submodule "jenkins-kubernetes-plugin"]
 	path = jenkins-kubernetes-plugin
-	url = https://github.com/carlossg/jenkins-kubernetes-plugin.git
+	url = https://github.com/elibixby/jenkins-kubernetes-plugin.git
+[submodule "KubernetesAPIJavaClient"]
+	path = KubernetesAPIJavaClient
+	url = https://github.com/elibixby/KubernetesAPIJavaClient.git
