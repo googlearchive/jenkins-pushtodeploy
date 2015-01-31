@@ -1,0 +1,19 @@
+{
+	"id": "jenkinsslave1",
+	"apiVersion": "v1beta1",
+	"kind": "Pod",
+	"desiredState": {
+		"manifest": {
+			"containers":[
+				{
+					"name": "jenkinsslave",
+					"image": "elibixby/jenkins_slave"
+				}
+			]
+		}
+	},
+	"labels": {
+		"role": "slave"
+	}
+
+}

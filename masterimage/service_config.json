@@ -1,0 +1,12 @@
+{
+	"kind": "Service",
+	"id": "jenkins",
+	"apiVersion": "v1beta1",
+	"selector":{
+		"role": "master"
+	},
+	"containerPort": "http",
+	"protocol": "TCP",
+	"port": 8080,
+	"createExternalLoadBalancer": true
+}
