@@ -7,7 +7,7 @@
 			"containers":[
 				{
 					"name": "jenkinsmaster",
-					"image": "elibixby/jenkins_master",
+					"image": "elibixby/jenkins_master:latest",
 					"ports": [
 						{
 							"name": "http",

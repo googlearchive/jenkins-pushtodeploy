@@ -14,6 +14,7 @@ github:1.10
 github-oauth:0.20
 script-security:1.12
 git-server:1.5
+github-oauth:0.2
 workflow-aggregator:1.2
 durable-task:1.2
 workflow-api:1.2
