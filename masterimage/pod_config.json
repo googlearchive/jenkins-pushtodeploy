@@ -1,22 +1,57 @@
 {
-	"id": "jenkinsmaster1",
-	"apiVersion": "v1beta1",
+	"metadata": {
+		"name": "jenkinsmaster"
+	},
+	"apiVersion": "v1beta3",
 	"kind": "Pod",
-	"desiredState": {
-		"manifest": {
-			"containers":[
-				{
-					"name": "jenkinsmaster",
-					"image": "elibixby/jenkins_master:latest",
-					"ports": [
-						{
-							"name": "http",
-							"containerPort": 8080
-						}
-					]
+	"spec": {
+		"containers":[
+			{
+				"name": "jenkinsmaster",
+				"image": "elibixby/jenkins_master",
+				"imagePullPolicy": "Always",
+				"ports": [
+					{
+						"name": "webui",
+						"containerPort": 8080
+					},
+					{
+						"name": "slavelistener",
+						"containerPort": 50000
+					}
+				],
+				"volumeMounts": [
+					{
+						"name": "jenkinsconfig",
+						"mountPath": "/var/jenkins_home"
+
+					},
+					{
+						"name": "kubernetesauth",
+						"mountPath": "/etc/auth"
+					}
+
+				]
+			}
+		],
+		"volumes": [
+			{
+				"name": "jenkinsconfig",
+				"source": {
+					"persistentDisk": {
+						"fsType": "gcePersistentDisk"
+					}
 				}
-			]
-		}
+			},
+			{
+				"name": "kubernetesauth",
+				"source": {
+					"secret": {
+						"secretName": "kubernetesauth"
+					}
+				}
+			}
+		]
 	},
 	"labels": {
 		"role": "master"
