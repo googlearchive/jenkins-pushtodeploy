@@ -1,6 +1,9 @@
 {
 	"metadata": {
-		"name": "jenkinsmaster"
+		"name": "jenkinsmaster",
+		"labels": {
+			"role": "master"
+		}
 	},
 	"apiVersion": "v1beta3",
 	"kind": "Pod",
@@ -28,7 +31,7 @@
 					},
 					{
 						"name": "kubernetesauth",
-						"mountPath": "/etc/auth"
+						"mountPath": "/var/lib"
 					}
 
 				]
@@ -47,13 +50,10 @@
 				"name": "kubernetesauth",
 				"source": {
 					"secret": {
-						"secretName": "kubernetesauth"
+						"secretName": "kubelet"
 					}
 				}
 			}
 		]
-	},
-	"labels": {
-		"role": "master"
 	}
 }
