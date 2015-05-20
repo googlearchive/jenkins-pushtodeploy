@@ -4,7 +4,7 @@
 
 This project is no longer actively developed or maintained.  
 
-For new work on this check out [jenkernetes](github.com/GoogleCloudPlatform/jenkernetes)
+For new work on this check out [jenkernetes](https://github.com/GoogleCloudPlatform/jenkernetes)
 
 ---
 
